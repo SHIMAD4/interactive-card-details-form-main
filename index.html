@@ -8,6 +8,7 @@
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
 <body>
+  <img src="./images/bg-main-desktop.png" alt="bg-main-desktop">
   <div class="container">
     <form action="#">
       <p>Cardholder Name</p>
@@ -16,13 +17,16 @@
       <p>Card Number</p>
       <input class="cardnumber" type="text" size="40" placeholder="e.g. 1234 5678 9123 0000">
   
-      <p>Exp. Date (MM/YY)</p>
-      <input class="card_mm" type="text" size="3" placeholder="MM">
-      <input class="card_yy" type="text" size="3" placeholder="YY">
-  
-      <p>CVC</p>
-      <input class="card_cvc" type="text" size="20" placeholder="e.g. 123"><br>
-  
+      <div class="date">
+        <p>Exp. Date (MM/YY)</p>
+        <input class="card_mm" type="text" size="3" placeholder="MM">
+        <input class="card_yy" type="text" size="3" placeholder="YY">  
+      </div>
+      
+      <div class="cvc">
+        <p class="card_cvc_p">CVC</p>
+        <input class="card_cvc" type="text" size="3" placeholder="e.g. 123"><br>
+      </div><br>
       <button>Confirm</button>
     </form>
   </div>
