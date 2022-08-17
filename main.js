@@ -1,28 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  const inputElement = document.querySelector('.cardnumber') // ищем наш единственный input
-  const inputMask = { // создаем объект параметров
-    mask: '0000 0000 0000 0000' // задаем единственный параметр mask
+  const mask = (dataValue, options) => {                                          // создаем универсальную функцию
+    const elements = document.querySelectorAll(`[data-mask="${dataValue}"]`)      // ищем поля ввода по селектору с переданным значением data-атрибута
+    if (!elements) return                                                         // если таких полей ввода нет, прерываем функцию
+
+    elements.forEach(el => {                                                      // для каждого из полей ввода
+      IMask(el, options)                                                          // инициализируем плагин imask для необходимых полей ввода с переданными параметрами маски
+    })
   }
 
-  const month = document.querySelector('.card_mm')
-  const monthMask = {
+  mask('card-number', {
+    mask: '0000 0000 0000 0000'
+  })
+
+  mask('card-mm', {
     mask: '00'
-  }
+  })
 
-  const year = document.querySelector('.card_yy')
-  const yearMask = {
+  mask('card-yy', {
     mask: '0000'
-  }
+  })
 
-  const card_cvc = document.querySelector('.card_cvc')
-  const card_cvcMask = {
+  mask('card-cvc', {
     mask: '000'
-  }
-
-  IMask(inputElement, inputMask) // запускаем плагин с переданными параметрами
-  IMask(month, monthMask)
-  IMask(year, yearMask)
-  IMask(card_cvc, card_cvcMask)
-
+  })
 })

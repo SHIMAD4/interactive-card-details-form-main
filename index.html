@@ -16,20 +16,20 @@
   <div class="container">
     <form action="#">
       <p>Cardholder Name</p>
-      <input class="user" type="text" size="40" pattern="[0-9]{1,5}" placeholder="e.g. Jane Appleseed">
+      <input class="user" type="text" size="40" placeholder="e.g. Jane Appleseed">
   
       <p>Card Number</p>
-      <input class="cardnumber" type="text" size="40" placeholder="e.g. 1234 5678 9123 0000">
+      <input class="cardnumber" type="text" size="40" placeholder="e.g. 1234 5678 9123 0000" data-mask="card-number">
   
       <div class="date">
         <p>Exp. Date (MM/YY)</p>
-        <input class="card_mm" type="text" size="3" placeholder="MM">
-        <input class="card_yy" type="text" size="3" placeholder="YY">  
+        <input class="card_mm" type="text" size="3" placeholder="MM" data-mask="card-mm">
+        <input class="card_yy" type="text" size="3" placeholder="YY" data-mask="card-yy">  
       </div>
       
       <div class="cvc">
         <p class="card_cvc_p">CVC</p>
-        <input class="card_cvc" type="text" size="3" placeholder="e.g. 123"><br>
+        <input class="card_cvc" type="text" size="3" placeholder="e.g. 123" data-mask="card-cvc"><br>
       </div><br>
       <button>Confirm</button>
     </form>
@@ -52,8 +52,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://vk.com/disshin">Vitaliy Starcev</a>.
   </div>
-  <script src="/jquery-3.6.0.min.js"></script>
-  <script src="https://unpkg.com/imask"></script>
-  <script src="/main.js"></script>
+  <script src="/jquery-3.6.0.min.js"></script>     <!-- Библеотека JQuery -->
+  <script src="https://unpkg.com/imask"></script>  <!-- Библеотека IMask -->
+  <script src="/main.js"></script>                 <!-- Главный скрипт -->
 </body>
 </html>
