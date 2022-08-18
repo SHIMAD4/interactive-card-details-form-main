@@ -12,30 +12,7 @@ body {
 }
 
 img {
-  height: 100%;
-  display: inline-block;
-  position: absolute;
-}
-
-.card {
-  width: 380px;
-  height: 30%;
-}
-
-.card-front {
-  display: flex;
-  position: absolute;
-  right: 70%;
-  top: 20%;
-  width: 384px;
-  height: 216px;
-}
-
-.card-back {
-  display: flex;
-  position: absolute;
-  right: 65%;
-  top: 55%;
+  height: 100vh;
 }
 
 .container {
@@ -65,6 +42,65 @@ input {
 
 input::-webkit-input-placeholder {
   color: hsl(270deg, 3%, 87%);
+}
+
+.bg-main-desktop {
+  position: absolute;
+  float: left;
+}
+
+.cards {
+  width: 380px;
+  position: relative;
+  top: 60px;
+  left: 90px;
+}
+
+.card {
+  width: 380px;
+  height: 30%;
+}
+
+.front-side {
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.card-number-prg {
+  color: white;
+  font-size: 28px;
+  position: relative;
+  top: 195px;
+  left: 20px;
+}
+
+.card-name-prg {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  top: 203px;
+  left: 20px;
+}
+
+.card-date-prg {
+  color: white;
+  font-size: 14px;
+  position: relative;
+  top: 180px;
+  left: 315px;
+}
+
+.back-side {
+  width: 80%;
+  float: right;
+}
+
+.card-cvc-prg {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: 120px;
+  left: 295px;
 }
 
 .date {
