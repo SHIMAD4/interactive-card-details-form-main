@@ -1,72 +1,81 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+
+// === Primary colors ===
+$gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%); // active input border
+$red: hsl(0, 100%, 66%); // input errors
+
+
+// === Neutral colors ===
+$white: hsl(0, 0%, 100%);
+$light-grayish-violet: hsl(270, 3%, 87%);
+$dark-grayish-violet: hsl(279, 6%, 55%);
+$very-dark-violet: hsl(278, 68%, 11%);
+
+
+// === General styles ===
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   font-size: 18px;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 500;
 }
-
 img {
   height: 100vh;
 }
-
 .container {
   display: inline-block;
   position: absolute;
   top: 50%;
   left: 70%;
   margin-right: -50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
 }
-
 p {
   height: 24px;
   font-size: 12px;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
-
 input {
   width: 80%;
   height: 35px;
-  border: 2px solid hsl(270deg, 3%, 87%);
+  border: 2px solid $light-grayish-violet;
   border-radius: 5px;
   margin-bottom: 10px;
   text-indent: 10px;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
-
-input::-webkit-input-placeholder {
-  color: hsl(270deg, 3%, 87%);
+input::-webkit-input-placeholder { 
+  color: $light-grayish-violet; 
 }
-
 .bg-main-desktop {
   position: absolute;
   float: left;
 }
 
+// === Cards styles ===
 .cards {
   width: 380px;
   position: relative;
   top: 60px;
   left: 90px;
 }
-
 .card {
+  // display: flex;
+  // position: absolute;
   width: 380px;
   height: 30%;
 }
-
 .front-side {
   margin-bottom: 10px;
   width: 50%;
 }
-
 .card-number-prg {
   color: white;
   font-size: 28px;
@@ -74,7 +83,6 @@ input::-webkit-input-placeholder {
   top: 190px;
   left: 20px;
 }
-
 .card-name-prg {
   color: white;
   font-size: 18px;
@@ -82,15 +90,12 @@ input::-webkit-input-placeholder {
   top: 203px;
   left: 20px;
 }
-
 .card-mm-prg {
   display: inline-block;
 }
-
 .card-yy-prg {
   display: inline-block;
 }
-
 .card-date-prg {
   color: white;
   font-size: 14px;
@@ -98,12 +103,10 @@ input::-webkit-input-placeholder {
   top: 173px;
   left: 315px;
 }
-
 .back-side {
   width: 80%;
   float: right;
 }
-
 .card-cvc-prg {
   color: white;
   font-size: 20px;
@@ -112,48 +115,61 @@ input::-webkit-input-placeholder {
   left: 295px;
 }
 
+
+// === Date styles ===
 .date {
   width: 30%;
   display: inline-block;
   margin-right: -5px;
 }
-
 input.card_mm {
   width: 45%;
   padding-right: 0;
   margin-right: 0;
 }
-
 input.card_yy {
   width: 45%;
 }
 
+
+// === CVC styles ===
 .cvc {
   width: 50%;
   display: inline-block;
 }
-
 input.card_cvc {
   width: 100%;
 }
 
+
+// === Button styles ===
 button {
   width: 80%;
   height: 35px;
   border-radius: 5px;
   border: none;
-  background-color: hsl(278deg, 68%, 11%);
+  background-color: $very-dark-violet;
   color: white;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
+
+// === Attribution ===
 .attribution {
   display: block;
   font-size: 12px;
   text-align: center;
 }
-
 .attribution a {
-  color: hsl(228deg, 45%, 44%);
-  font-family: "Space Grotesk", sans-serif;
+  color: hsl(228, 45%, 44%);
+  font-family: 'Space Grotesk', sans-serif;
 }
+
+@media screen and (max-width: 1200px) {
+  body{
+    background-color: black;
+  }
+}
+
+// - Mobile: 375px
+// - Desktop: 1440px

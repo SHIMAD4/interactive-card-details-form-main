@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/desktop.css" id="styles">
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
 <body>
   <img class="bg-main-desktop" src="./images/bg-main-desktop.png" alt="bg-main-desktop">
   <div class="cards">
-    <p class="card-number-prg">0000 0000 0000 0000</p>
+    <text class="card-number-prg">0000 0000 0000 0000</text>
     <p class="card-name-prg">Cardholder Name</p>
     <p class="card-mm-prg card-date-prg">00</p>
     <p class="card-yy-prg card-date-prg">00</p>
@@ -25,20 +25,20 @@
   <div class="container">
     <form action="#">
       <p>Cardholder Name</p>
-      <input class="user-name" type="text" size="40" placeholder="e.g. Jane Appleseed">
+      <input class="user-name" type="text" size="40" placeholder="e.g. Jane Appleseed" maxlength="25">
   
       <p>Card Number</p>
-      <input class="card-number" type="text" size="40" placeholder="e.g. 1234 5678 9123 0000" data-mask="card-number">
+      <input class="card-number" type="text" size="40" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" data-mask="card-number">
   
       <div class="date">
         <p>Exp. Date (MM/YY)</p>
-        <input class="card_mm" type="text" size="3" placeholder="MM" data-mask="card-mm">
-        <input class="card_yy" type="text" size="3" placeholder="YY" data-mask="card-yy">  
+        <input class="card_mm" type="text" size="3" placeholder="MM" maxlength="2" data-mask="card-mm">
+        <input class="card_yy" type="text" size="3" placeholder="YY" maxlength="2" data-mask="card-yy">  
       </div>
     
       <div class="cvc">
         <p class="card_cvc_p">CVC</p>
-        <input class="card_cvc" type="text" size="3" placeholder="e.g. 123" data-mask="card-cvc"><br>
+        <input class="card_cvc" type="text" size="3" placeholder="e.g. 123" maxlength="3" data-mask="card-cvc"><br>
       </div>
       <br>
       <button>Confirm</button>
@@ -66,5 +66,6 @@
   <script src="https://unpkg.com/imask"></script>    <!-- Библеотека IMask -->
   <script src="/js/main.js"></script>                <!-- Главный скрипт -->
   <script src="/js/card-change.js"></script>         <!-- Изменения при вводе в инпут -->
+  <script src="/js/styles.js"></script>              <!-- Cкрипт стилей-->
 </body>
 </html>

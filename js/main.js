@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mask('card-number', {
     mask: '0000 0000 0000 0000',
-    max: 19
   })
 
   mask('card-mm', {

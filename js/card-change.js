@@ -7,7 +7,7 @@ let $cardСvc_prg    = document.querySelector('.card-cvc-prg')          // За�
 
 let cardNumber = document.querySelector('.card-number')
 cardNumber.oninput = function() {
-  $cardNumber_prg.innerHTML = cardNumber.value;
+  $cardNumber_prg.innerHTML = this.value;
 
   if(cardNumber.value === ''){
     $cardNumber_prg.innerHTML = '0000 0000 0000 0000'
@@ -16,7 +16,8 @@ cardNumber.oninput = function() {
 
 let userName = document.querySelector('.user-name')
 userName.oninput = function() {
-  $cardName_prg.innerHTML = userName.value;
+
+  $cardName_prg.innerHTML = this.value;
 
   if(userName.value === ''){
     $cardName_prg.innerHTML = 'Cardholder Name'
@@ -25,7 +26,7 @@ userName.oninput = function() {
 
 let cardDateMM = document.querySelector('.card_mm')
 cardDateMM.oninput = function() {
-  $cardDateMM_prg.innerHTML = cardDateMM.value;
+  $cardDateMM_prg.innerHTML = this.value;
 
   if(cardDateMM.value === ''){
     $cardDateMM_prg.innerHTML = '00'
@@ -34,7 +35,7 @@ cardDateMM.oninput = function() {
 
 let cardDateYY = document.querySelector('.card_yy')
 cardDateYY.oninput = function() {
-  $cardDateYY_prg.innerHTML = cardDateYY.value;
+  $cardDateYY_prg.innerHTML = this.value;
 
   if(cardDateYY.value === ''){
     $cardDateYY_prg.innerHTML = '00'
@@ -43,7 +44,7 @@ cardDateYY.oninput = function() {
 
 let cardСvc = document.querySelector('.card_cvc')
 cardСvc.oninput = function() {
-  $cardСvc_prg.innerHTML = cardСvc.value;
+  $cardСvc_prg.innerHTML = this.value;
 
   if(cardСvc.value === ''){
     $cardСvc_prg.innerHTML = '000'
